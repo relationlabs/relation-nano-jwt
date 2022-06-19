@@ -1,0 +1,20 @@
+[package]
+name = "nano-jwt"
+version = "0.1.0"
+description = "Nano JWT implementation in pure Rust"
+keywords = ["JWT", "JWK", "ECDSA"]
+edition = "2021"
+
+[dependencies]
+
+anyhow = "1"
+thiserror = "1"
+chrono = "0.4"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+smallvec = "1.8"
+base64ct = "1.5"
+p256 = { version = "0.10.0", default-features = false, features = ["ecdsa", "jwk", "pem"] }
+
+[[example]]
+name = "es256_example"
